@@ -485,7 +485,7 @@ module RubyXL
     def get_column_width(column_index = 0)
       width = get_column_width_raw(column_index)
       return RubyXL::ColumnRange::DEFAULT_WIDTH if width.nil?
-      (width - (5.0 / RubyXL::Font::MAX_DIGIT_WIDTH)).round
+      (width - (5.0 / RubyXL::Font::MAX_DIGIT_WIDTH)).round(1)
     end
 
     # Set raw column width value
